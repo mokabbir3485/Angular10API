@@ -30,6 +30,9 @@ namespace WebApplication1.Models
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         public user user { get; set; }
+        public int CustomerId { get; set; }
+        [ForeignKey("CustomerId")]
+        public customer customer { get; set; }
         public int OrderId { get; set; }
         [ForeignKey("OrderId")]
         public order order { get; set; }

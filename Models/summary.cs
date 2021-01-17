@@ -15,6 +15,8 @@ namespace WebApplication1.Models
         public DateTime TransactionDate { get; set; }
         [Column("Invoice_No")]
         public string InvoiceNo { get; set; }
+        [Column("Payment_Type")]
+        public string PaymentType { get; set; }
         [Column("Trans_Discount")]
         public int TransDiscount { get; set; }
         [Column("Total_Amount")]
@@ -25,6 +27,9 @@ namespace WebApplication1.Models
         public decimal Change { get; set; }
         [Column("Status")]
         public bool Status { get; set; }
+        public int BankId { get; set; }
+        [ForeignKey("BankId")]
+        public bankDetails bankDetails { get; set; }
 
     }
 }
