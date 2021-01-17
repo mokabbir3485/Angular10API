@@ -14,6 +14,7 @@ namespace spUsed.Models
 
         [ForeignKey("ProductId")]
         public int ProductId { get; set; }
+        public Product Product { get; set; }
 
         public DateTime PurchesDate { get; set; }
 
@@ -26,16 +27,20 @@ namespace spUsed.Models
 
         [ForeignKey("TransactionId")]
         public int TransactionId { get; set; }
+        public Transaction Transaction { get; set; }
         public decimal PurchesAmmount { get; set; }
 
         [ForeignKey("SalesId")]
         public int SalesId { get; set; }
+        public Sales Sales { get; set; }
         public string Reson { get; set; }
 
         [ForeignKey("StockId")]
         public int StockId { get; set; }
+        public Stock Stock { get; set; }
 
         [ForeignKey("VendorId")]
         public int VendorId { get; set; }
+        public Vendor Vendor { get; set; }
     }
 }

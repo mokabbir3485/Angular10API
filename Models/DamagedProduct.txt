@@ -14,8 +14,10 @@ namespace spUsed.Models
 
         [ForeignKey("StockId")]
         public int StockId { get; set; }
+        public Stock Stock { get; set; }
 
         [ForeignKey("ProductId")]
         public int ProductId { get; set; }
+        public Product Product { get; set; }
     }
 }
